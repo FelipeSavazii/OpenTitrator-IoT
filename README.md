@@ -25,6 +25,7 @@ This project features a dynamic internationalization system with **RTL support**
 | 🇯🇵 | 日本語 | `ja-JP` |
 | 🇰🇷 | 한국어 | `ko-KR` |
 | 🇮🇳 | हिन्दी | `hi-IN` |
+| 🇮🇩 | Bahasa Indonesia | `id-ID` |
 | 🇸🇦 | العربية | `ar` |
 
 ---
