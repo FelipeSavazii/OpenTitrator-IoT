@@ -115,7 +115,7 @@ npm run dev
 
 ## 📸 Screenshots
 
-*(Place for more photos of the physical prototype, charts, or diagrams)*
+*Nothing here for now.*
 
 -----
 
