@@ -1,0 +1,12 @@
+[wokwi]
+version = 1
+firmware = '.pio/build/esp32doit-devkit-v1/firmware.bin'
+elf = '.pio/build/esp32doit-devkit-v1/firmware.elf'
+
+# Porta serial para debug
+rfc2217ServerPort = 4000
+
+# IoT Gateway
+[[net.forward]]
+from = "localhost:8180"
+to = "target:80"

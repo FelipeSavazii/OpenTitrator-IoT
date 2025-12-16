@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "author": "Felipe Savazi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "arduino" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-emissor",
+      "top": -80,
+      "left": 120,
+      "attrs": { "color": "white", "label": "Emissor Luz" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r-led",
+      "top": -80,
+      "left": 50,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr-sensor",
+      "top": -83.2,
+      "left": 202.4,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.1", "led-emissor:C", "black", [ "v0" ] ],
+    [ "esp:2", "r-led:1", "green", [ "v0" ] ],
+    [ "r-led:2", "led-emissor:A", "green", [ "v0" ] ],
+    [ "ldr-sensor:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "ldr-sensor:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "ldr-sensor:AO", "esp:34", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
